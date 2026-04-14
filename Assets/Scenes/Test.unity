@@ -17856,11 +17856,11 @@ GameObject:
   - component: {fileID: 1275855436}
   - component: {fileID: 1275855435}
   - component: {fileID: 1275855434}
-  - component: {fileID: 1275855438}
   - component: {fileID: 1275855437}
+  - component: {fileID: 1275855438}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17972,7 +17972,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1275855432}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8de284dcad909df46801e4e4adc74b83, type: 3}
+  m_Script: {fileID: 11500000, guid: fedd02606ebfea74b937295ff23690a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FirstPersonController
   characterCamera: {fileID: 125740647}
@@ -17982,7 +17982,7 @@ MonoBehaviour:
   jumpForce: 10
   pushForce: 4
   dashForce: 0
-  dashDuration: 50
+  dashDuration: 0.2
   moveInput: {x: 0, y: 0}
 --- !u!1 &1281201214
 GameObject:
@@ -28175,9 +28175,9 @@ GameObject:
   - component: {fileID: 1847079898}
   - component: {fileID: 1847079897}
   - component: {fileID: 1847079896}
-  - component: {fileID: 1847079895}
   - component: {fileID: 1847079901}
-  - component: {fileID: 1847079900}
+  - component: {fileID: 1847079902}
+  - component: {fileID: 1847079903}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -28185,19 +28185,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1847079895
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1847079894}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd5503da3a715c740ac4d2da7cce69bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AgentSimpleContoller
-  Target: {fileID: 1275855436}
 --- !u!136 &1847079896
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -28293,20 +28280,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1847079900
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1847079894}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dad7e0f733659af43a0d6ae494b958e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::OffMeshJumpParabola
-  jumpHeight: 2
-  jumpDuration: 0.5
 --- !u!195 &1847079901
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -28329,6 +28302,33 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &1847079902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1847079894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b6550703e4ae2846a8d7e369c1b16b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AgentSimpleContoller
+  Target: {fileID: 1275855436}
+--- !u!114 &1847079903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1847079894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fca9fa4871772e489d4c3dd4fa4f818, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OffMeshJumpParabola
+  jumpHeight: 2
+  jumpDuration: 0.5
 --- !u!1 &1882509457
 GameObject:
   m_ObjectHideFlags: 0
